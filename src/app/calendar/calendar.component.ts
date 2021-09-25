@@ -20,22 +20,22 @@ export class CalendarComponent implements OnInit {
   present_week = this.date.getDay();
   
 
-  counter(i: number) {
+  numDays() {
     if(this.month == 0 || this.month == 2 || this.month == 4 || this.month == 6 || this.month == 7 || this.month == 9 || this.month == 11) {
-      return new Array(i);
+      return new Array(31);
     }
     else if(this.month == 1)
     {
       if(this.present_year%4 == 0)
       {
-        return new Array(i-2);
+        return new Array(29);
       }
       else{
-        return new Array(i-3);
+        return new Array(28);
       }
     }
     else
-      return new Array(i-1);
+      return new Array(30);
   }
 
   none(i: number) {
