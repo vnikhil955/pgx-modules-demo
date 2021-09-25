@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="calender">
+        <div class="row">
+            <h4 id="col-center" class="col"><i class="bi bi-caret-left-fill"></i></h4>
+            <h2 id="col-center" class="col-md-8 month">{{ months[month] }} {{ present_year }}</h2>
+            <h4 id="col-center" class="col"><i class="bi bi-caret-right-fill"></i></h4>
+        </div>
+        <div class="row">
+            <h6 id="col-center" class="col" *ngFor="let in of none(7),let i = index">{{ totalWeek[i] }}</h6>
+        </div>
+        <div class="row">
+            <div class="seven-col" *ngFor='let in of none(present_week) ;let i = index'></div>
+            <div id="hover" class="seven-col" *ngFor='let in of counter(31) ;let i = index'>{{i+1}}</div>
+        </div>
+    </div>
+</div>
